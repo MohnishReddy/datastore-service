@@ -1,0 +1,4 @@
+database:
+  db_url: "localhost:27017"
+  username: "root"
+  password: "m1s9c9r7"
