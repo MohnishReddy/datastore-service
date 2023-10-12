@@ -24,7 +24,7 @@ func main() {
 		mode = constants.TestMode
 	}
 
-	if mode != constants.TestMode && mode != constants.DataStorePodMode && mode != constants.LoadBalancerMode {
+	if mode != constants.TestMode && mode != constants.DataStorePodMode {
 		fmt.Println("Unknown mode selected")
 		return
 	}

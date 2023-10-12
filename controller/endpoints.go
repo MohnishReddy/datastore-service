@@ -15,10 +15,4 @@ func ExposeEndpoints(r *gin.Engine, mode constants.ServiceMode) {
 		dataStoreGroup.POST("/upload", UploadFileController())
 		dataStoreGroup.GET("/download/:refId", DownloadFileController())
 	}
-
-	if mode == constants.TestMode || mode == constants.LoadBalancerMode {
-		loadBalancerGroup := r.Group("/api/v1/lb/")
-		loadBalancerGroup.GET("/health", GetHealth())
-	}
-
 }

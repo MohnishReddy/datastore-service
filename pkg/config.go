@@ -40,8 +40,6 @@ func getConfigPath(env constants.ServiceMode) (path string, err error) {
 		path = "./config.yml"
 	case constants.DataStorePodMode:
 		path = "./config-data-store.yml"
-	case constants.LoadBalancerMode:
-		path = "./config-load-balancer.yml"
 	}
 
 	err = validateConfigPath(path)
